@@ -14,19 +14,17 @@
 
 
 def even_fibonacci_sum(first_term,second_term,last_term):
-    continue_flag = True
+    next_term = 0
     running_sum = second_term
-    while continue_flag:
+    while next_term < last_term:
         next_term = first_term + second_term
-        if next_term > last_term:
-            return running_sum
-        else:
-            if (next_term % 2) == 0:
-                running_sum += next_term
+        if (next_term % 2) == 0:
+            running_sum += next_term
         first_term = second_term
         second_term = next_term
+    return running_sum
 
 first_term, second_term, last_term = 1, 2, 4e6
 even_fibonacci_sum(first_term,second_term,last_term)
-# Output: 4613732            
+# Output: 4613732           
         
