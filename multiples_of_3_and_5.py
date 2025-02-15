@@ -20,7 +20,7 @@ method_one_time = time.time()
 method_one(3,5,1000)
 method_one_time = time.time() - method_one_time
 
-print("Method 1 took " + str(method_one_time) + " seconds")
+print(f"Method 1 took {method_one_time} seconds")
 
 
      
